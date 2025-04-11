@@ -1,54 +1,9 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-         body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      /* background-color: #f5f7fa; */
-      /* color: #2e2e2e; */
-      /* margin: 0; */
-      /* padding: 20px; */
-      background-image: url(workplace-objects_1112-82.avif);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh; /* full height */
-      color: rgb(11, 101, 204);
-    }
-    .container {
-      max-width: 960px;
-      margin: auto;
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-
-    </style>
-</head>
-<body>
-<div class="container">
-    <div>
-       <h1> Heartly Welcome ! to my Projects section ,</h1>
-       <h2> Here you can explore my Projects !</h2>
-    </div>
-    <div>
-        <h3>Admin Portal  <a href="https://abdulmajeedhu.github.io/adminportal/"> -> To view live </a></h3>
-        <h3>Shopping Cart <a href="https://abdulmajeedhu.github.io/shopping_cart/">-> To view live </a></h3>
-    </div>
-</div>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | Abdul Majeedhu</title>
+  <title>My Projects | Abdul Majeedhu</title>
   <style>
     * {
       margin: 0;
@@ -58,10 +13,8 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, sans-serif;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('workplace-objects_1112-82.avif');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('workplace-objects_1112-82.avif') no-repeat center center/cover;
       color: #fff;
       min-height: 100vh;
       display: flex;
@@ -71,60 +24,98 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
+      width: 100%;
       background: rgba(255, 255, 255, 0.95);
-      color: #2c3e50;
-      padding: 40px;
-      border-radius: 15px;
+      border-radius: 16px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      padding: 50px 40px;
+      color: #2c3e50;
       text-align: center;
+      backdrop-filter: blur(10px);
     }
 
-    h1 {
-      font-size: 2.5rem;
+    .container h1 {
+      font-size: 2.8rem;
       margin-bottom: 10px;
       color: #0b66cc;
     }
 
-    h2 {
+    .container h2 {
       font-size: 1.5rem;
-      margin-bottom: 30px;
+      font-weight: 500;
+      margin-bottom: 35px;
     }
 
-    .project {
-      margin: 20px 0;
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
     }
 
-    .project a {
+    .project-card {
+      background-color: #f4f6f8;
+      border-radius: 12px;
+      padding: 20px 25px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #0b66cc;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 10px;
       text-decoration: none;
       background-color: #0b66cc;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      display: inline-block;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
 
-    .project a:hover {
+    .project-link:hover {
       background-color: #094b99;
-      transform: translateY(-2px);
+    }
+
+    @media (min-width: 768px) {
+      .projects {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .project-card {
+        width: 45%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Heartly Welcome!</h1>
-    <h2>Explore My Featured Projects</h2>
+    <h1>Welcome to My Projects</h1>
+    <h2>Explore some of the awesome work I've built!</h2>
 
-    <div class="project">
-      <h3>Admin Portal</h3>
-      <a href="https://abdulmajeedhu.github.io/adminportal/" target="_blank">View Live</a>
-    </div>
+    <div class="projects">
+      <div class="project-card">
+        <div class="project-title">Admin Portal</div>
+        <a class="project-link" href="https://abdulmajeedhu.github.io/adminportal/" target="_blank">View Live</a>
+      </div>
 
-    <div class="project">
-      <h3>Shopping Cart</h3>
-      <a href="https://abdulmajeedhu.github.io/shopping_cart/" target="_blank">View Live</a>
+      <div class="project-card">
+        <div class="project-title">Shopping Cart</div>
+        <a class="project-link" href="https://abdulmajeedhu.github.io/shopping_cart/" target="_blank">View Live</a>
+      </div>
     </div>
   </div>
 </body>
